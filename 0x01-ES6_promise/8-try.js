@@ -1,7 +1,7 @@
 export function divideFunction (numerator, denominator) {
-  try {
-    return (numerator / denominator);
-  } catch (err) {
+  if (denominator === 0) {
     throw Error('cannot divide by 0');
+  } else {
+    return numerator / denominator;
   }
 }
