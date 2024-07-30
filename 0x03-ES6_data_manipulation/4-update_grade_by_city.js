@@ -1,5 +1,5 @@
 export default function updateStudentGradeByCity(students, city, grades) {
-  return students.filter((s) => (s.location === city))
+  return !Array.isArray(students) ? [] : students.filter((s) => (s.location === city))
     .map((s) => {
       const grad = grades.filter((g) => g.studentId === s.id);
       if (grad.length) {
