@@ -1,10 +1,10 @@
 process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-process.stdin.on('data', () => {
-  const chunk = process.stdin.read().toString();
+process.stdin.on('readable', () => {
+  const line = process.stdin.read();
 
-  if (chunk) {
-    process.stdout.write(`Your name is: ${chunk}`);
+  if (line) {
+    process.stdout.write(`Your name is: ${line}`);
   }
 });
 
