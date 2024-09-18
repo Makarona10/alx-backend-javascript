@@ -1,5 +1,6 @@
 const { expect } = require('chai');
 const calculateNumber = require('./2-calcul_chai');
+
 describe('calculateNumber', () => {
   describe('type == "SUM"', () => {
     it('', () => {
@@ -49,21 +50,21 @@ describe('calculateNumber', () => {
     });
   
     it('', () => {
-      expect(calculateNumber('SUBTRACT', -2.0, 2.0), -4.0).to.equal(-4.0);
+      expect(calculateNumber('SUBTRACT', -2.0, 2.0)).to.equal(-4.0);
     });
   
     it('', () => {
-      expect(calculateNumber('SUBTRACT', 2.0, -2.0), -4.0).to.equal(-4.0);
+      expect(calculateNumber('SUBTRACT', 2.0, -2.0)).to.equal(4.0);
     });
   
     it('', () => {
-      expect(calculateNumber('SUBTRACT', 0.0, 0.0), 0).to.equal(0);
+      expect(calculateNumber('SUBTRACT', 0.0, 0.0)).to.equal(0);
     });
     });
   
   describe('type == "DIVIDE"', () => {
     it('', () => {
-      expect(calculateNumber('DIVIDE', 8.0, 2.0), 4.0).to.equal(4.0);
+      expect(calculateNumber('DIVIDE', 8.0, 2.0)).to.equal(4.0);
     });
   
     it('', () => {
